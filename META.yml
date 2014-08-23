@@ -3,6 +3,7 @@ abstract: "Experian's ID Authenticate service"
 author:
   - 'binary.com <perl@binary.com>'
 build_requires:
+  Test::MockModule: '0'
   Test::More: '0'
 configure_requires:
   ExtUtils::MakeMaker: '0'
@@ -26,4 +27,4 @@ requires:
   XML::Simple: '0'
   XML::Twig: '0'
   perl: '5.006'
-version: '1.00'
+version: '1.2'
