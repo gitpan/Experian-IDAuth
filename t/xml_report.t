@@ -14,6 +14,7 @@ use_ok( 'Experian::IDAuth' );
 system "rm -rf /tmp/proveid/";
 
 my $module = Test::MockModule->new('SOAP::Lite');
+my $xml;
 
 # create a return object
 {
@@ -31,7 +32,7 @@ my $module = Test::MockModule->new('SOAP::Lite');
     }
 
     sub result {
-my $xml =<<EOD;
+$xml =<<EOD;
 <?xml version="1.0" encoding="utf-8"?>
 <Search Type="Result">
   <CountryCode>GBR</CountryCode>
@@ -294,7 +295,7 @@ $module->mock(search => $som);
 
 my $prove_id = Experian::IDAuth->new(
     client_id      => '45',
-    search_option => 'ProveID_KYC',
+    search_option => 'CheckID',
     username      => 'my_user',
     password      => 'my_pass',
     residence     => 'gb',
@@ -308,9 +309,9 @@ my $prove_id = Experian::IDAuth->new(
 );
 
 my $prove_id_result = $prove_id->get_result();
+my $xml_report = $prove_id->get_192_xml_report();
 
-ok ($prove_id_result->{fully_authenticated}, 'fully authenticated');
-ok ($prove_id_result->{age_verified}, 'age verified');
+ok ($xml_report eq $xml, 'get_192_xml_report');
 
 Test::NoWarnings::had_no_warnings();
 done_testing;

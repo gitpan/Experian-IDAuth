@@ -7,5 +7,6 @@ t/decision.t
 t/get_result_check_id.t
 t/get_result_prove_id.t
 t/xml_as_hash.t
+t/xml_report.t
 META.yml                                 Module YAML meta-data (added by MakeMaker)
 META.json                                Module JSON meta-data (added by MakeMaker)

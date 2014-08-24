@@ -3,28 +3,28 @@ abstract: "Experian's ID Authenticate service"
 author:
   - 'binary.com <perl@binary.com>'
 build_requires:
-  Test::MockModule: '0'
-  Test::More: '0'
+  Test::MockModule: 0
+  Test::More: 0
 configure_requires:
-  ExtUtils::MakeMaker: '0'
+  ExtUtils::MakeMaker: 0
 dynamic_config: 1
-generated_by: 'ExtUtils::MakeMaker version 6.64, CPAN::Meta::Converter version 2.141170'
+generated_by: 'ExtUtils::MakeMaker version 6.72, CPAN::Meta::Converter version 2.132140'
 license: unknown
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
-  version: '1.4'
+  version: 1.4
 name: Experian-IDAuth
 no_index:
   directory:
     - t
     - inc
 requires:
-  IO::Socket: '0'
-  Locale::Country: '0'
-  Path::Tiny: '0'
-  SOAP::Lite: '0'
-  WWW::Mechanize: '0'
-  XML::Simple: '0'
-  XML::Twig: '0'
-  perl: '5.006'
-version: '1.2'
+  IO::Socket: 0
+  Locale::Country: 0
+  Path::Tiny: 0
+  SOAP::Lite: 0
+  WWW::Mechanize: 0
+  XML::Simple: 0
+  XML::Twig: 0
+  perl: 5.006
+version: 1.3
