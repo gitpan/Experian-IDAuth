@@ -16,4 +16,4 @@ no_index:
     - inc
 resources:
   repository: https://github.com/binary-com/perl-experian-idauth.git
-version: '1.4'
+version: '1.5'
